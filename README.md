@@ -11,5 +11,9 @@ npm start
 ## Deploy to Cloud Run
 
 ```sh
-gcloud run deploy prisma --source . --region asia-northeast1 --allow-unauthenticated
+gcloud run deploy prisma \
+  --source . \
+  --region asia-northeast1 \
+  --allow-unauthenticated \
+  --set-env-vars "DATABASE_URL=mysql://xxxx:yyyy@ap-northeast.connect.psdb.cloud/zzzz?sslaccept=strict"
 ```
